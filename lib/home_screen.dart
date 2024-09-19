@@ -9,14 +9,16 @@ class HomeScreen extends StatelessWidget {
     bool isDarkMode = themeProvider.themeMode == ThemeMode.dark;
 
     return Scaffold(
+      backgroundColor:
+          isDarkMode ? Color.fromARGB(255, 19, 19, 19) : Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              isDarkMode ? Icons.nightlight_round : Icons.wb_sunny,
-              size: 100,
-              color: isDarkMode ? Colors.yellow : Colors.orange,
+            Image.asset(
+              isDarkMode ? 'assets/images/moon.png' : 'assets/images/sun.png',
+              height: 200,
+              width: 200,
             ),
             SizedBox(height: 20),
             Text(
