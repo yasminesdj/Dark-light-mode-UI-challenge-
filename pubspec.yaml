@@ -25,3 +25,8 @@ flutter:
   assets:
     - assets/images/sun.png
     - assets/images/moon.png
+  fonts:
+    - family: Gilroy
+      fonts:
+        - asset: assets/fonts/Gilroy-SemiBold.ttf
+          weight: 900

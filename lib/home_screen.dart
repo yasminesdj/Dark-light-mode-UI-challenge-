@@ -9,8 +9,7 @@ class HomeScreen extends StatelessWidget {
     bool isDarkMode = themeProvider.themeMode == ThemeMode.dark;
 
     return Scaffold(
-      backgroundColor:
-          isDarkMode ? Color.fromARGB(255, 19, 19, 19) : Colors.white,
+      backgroundColor: isDarkMode ? Colors.black : Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -23,7 +22,11 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 20),
             Text(
               isDarkMode ? 'Dark Mode' : 'Light Mode',
-              style: TextStyle(fontSize: 24),
+              style: TextStyle(
+                fontSize: 24,
+                fontFamily: 'Gilroy', // Set Gilroy font
+                fontWeight: FontWeight.w600, // Semi Bold (weight 600)
+              ),
             ),
             SizedBox(height: 20),
             Switch(
